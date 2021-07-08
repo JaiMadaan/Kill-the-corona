@@ -29,7 +29,7 @@ function setup(){
  }
 function draw(){
   background(backImage)
- 
+ gunbooy.y=mouseY
   if (touches.length || keyDown("space")) {
     var temp_bullet = createBullet();
     temp_bullet.addImage(bulletImage);
