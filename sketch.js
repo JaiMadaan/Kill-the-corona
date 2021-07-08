@@ -35,19 +35,8 @@ function draw(){
     temp_bullet.addImage(bulletImage);
      temp_bullet.y = gunboy.y;
   }
-  if( keyDown("UP_ARROW")){
-     gunboy.y=gunboy.y-=4
-     }
-  
-    if(keyDown("DOWN_ARROW")){
-     gunboy.y=gunboy.y+=4
-     }
-  if(keyDown("LEFT_ARROW")){
-     gunboy.x=gunboy.x-=4
-     }
-  if(keyDown("RIGHT_ARROW")){
-     gunboy.x=gunboy.x+=4
-     }
+    gunboy.y=mouseY
+
   if (bulletGroup.isTouching(monsterGroup)){  bulletGroup.destroyEach();
                                                monsterGroup.destroyEach();
   score=score+200   
@@ -88,9 +77,9 @@ function createBullet() {
     return bullet;
 }
 function monster(){
-  var monster = createSprite(width,Math.round(random(25,600)),0,0);
+  var monster = createSprite(width,Math.round(random(50,1200)),0,0);
   monster.addImage(monsterImg);
-  monster.velocityX=-60 ;
+  monster.velocityX=-80 ;
   monster.lifetime=800;
 monsterGroup.add(monster)
 
