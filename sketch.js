@@ -35,7 +35,7 @@ function draw(){
     temp_bullet.addImage(bulletImage);
      temp_bullet.y = gunboy.y;
   }
-    gunboy.y=mouseY
+ 
 
   if (bulletGroup.isTouching(monsterGroup)){  bulletGroup.destroyEach();
                                                monsterGroup.destroyEach();
